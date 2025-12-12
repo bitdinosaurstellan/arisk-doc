@@ -29,12 +29,26 @@
             "tab": "API 参考",
             "groups": [
               {
-                "group": "API 参考",
+                "group": "风险分析",
                 "pages": [
                   "zh/api-reference/endpoint/analyze-address",
                   "zh/api-reference/endpoint/batch-analyze",
                   "zh/api-reference/endpoint/create-monitor",
                   "zh/api-reference/endpoint/delete-monitor"
+                ]
+              },
+              {
+                "group": "用户管理",
+                "pages": [
+                  "zh/api-reference/endpoint/user-profile",
+                  "zh/api-reference/endpoint/api-keys"
+                ]
+              },
+              {
+                "group": "报告管理",
+                "pages": [
+                  "zh/api-reference/endpoint/generate-report",
+                  "zh/api-reference/endpoint/list-reports"
                 ]
               }
             ]
@@ -72,12 +86,26 @@
             "tab": "API Reference",
             "groups": [
               {
-                "group": "API Reference",
+                "group": "Risk Analysis",
                 "pages": [
                   "en/api-reference/endpoint/analyze-address",
                   "en/api-reference/endpoint/batch-analyze",
                   "en/api-reference/endpoint/create-monitor",
                   "en/api-reference/endpoint/delete-monitor"
+                ]
+              },
+              {
+                "group": "User Management",
+                "pages": [
+                  "en/api-reference/endpoint/user-profile",
+                  "en/api-reference/endpoint/api-keys"
+                ]
+              },
+              {
+                "group": "Report Management",
+                "pages": [
+                  "en/api-reference/endpoint/generate-report",
+                  "en/api-reference/endpoint/list-reports"
                 ]
               }
             ]
