@@ -114,16 +114,6 @@
       "vscode"
     ]
   },
-  "redirects": [
-    {
-      "source": "/api-reference/endpoint/*",
-      "destination": "/api/*"
-    },
-    {
-      "source": "/i18n/en/api-reference/endpoint/*",
-      "destination": "/en/api/*"
-    }
-  ],
   "footer": {
     "socials": {
       "x": "https://x.com/mintlify",
