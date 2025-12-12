@@ -19,8 +19,8 @@
               {
                 "group": "快速开始",
                 "pages": [
-                  "index",
-                  "quickstart"
+                  "zh/index",
+                  "zh/quickstart"
                 ]
               }
             ]
@@ -31,10 +31,10 @@
               {
                 "group": "API 参考",
                 "pages": [
-                  "api-reference/endpoint/analyze-address",
-                  "api-reference/endpoint/batch-analyze",
-                  "api-reference/endpoint/create-monitor",
-                  "api-reference/endpoint/delete-monitor"
+                  "zh/api-reference/endpoint/analyze-address",
+                  "zh/api-reference/endpoint/batch-analyze",
+                  "zh/api-reference/endpoint/create-monitor",
+                  "zh/api-reference/endpoint/delete-monitor"
                 ]
               }
             ]
@@ -45,8 +45,8 @@
               {
                 "group": "版本发布",
                 "pages": [
-                  "updatelog/overview",
-                  "updatelog/latest"
+                  "zh/updatelog/overview",
+                  "zh/updatelog/latest"
                 ]
               }
             ]
