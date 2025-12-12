@@ -9,10 +9,6 @@
     {
       "url": "https://api.arisk.com/v1",
       "description": "Production Server"
-    },
-    {
-      "url": "https://api-sandbox.arisk.com/v1",
-      "description": "Sandbox Server"
     }
   ],
   "security": [
