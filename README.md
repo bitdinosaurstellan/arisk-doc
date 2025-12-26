@@ -437,6 +437,10 @@ openapi: <OpenAPI-JSON-路径> <HTTP-方法> <端点路径>
 ### OpenAPI 最佳实践
 
 - **Gozero支持导出openapi.json，可以使用goctl openapi init命令生成openapi.json**
+- **根据openapi.json生成mdx文件：**
+```bash
+npx @mintlify/scraping@latest openapi-file <path-to-openapi-file> -o <folder-name>
+```
 - **使用描述性的摘要和说明** 以获得更好的文档
 - **在 `components.schemas` 中定义可重用的模式** 以避免重复
 - **在请求/响应体中包含示例**

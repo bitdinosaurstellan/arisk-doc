@@ -12,55 +12,96 @@
     "languages": [
       {
         "language": "zh",
-        "tabs": [
+        "versions": [
           {
-            "tab": "指南",
-            "groups": [
+            "version": "v2 (推荐)",
+            "default": true,
+            "tabs": [
               {
-                "group": "快速开始",
-                "pages": [
-                  "zh/index",
-                  "zh/quickstart"
+                "tab": "指南",
+                "groups": [
+                  {
+                    "group": "快速开始",
+                    "pages": [
+                      "zh/index",
+                      "zh/quickstart"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "API 参考",
+                "groups": [
+                  {
+                    "group": "风险分析",
+                    "pages": [
+                      "zh/api-reference/v2/analyze-address"
+                    ]
+                  },
+                  {
+                    "group": "用户管理",
+                    "pages": [
+                      "zh/api-reference/v2/user-profile"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "更新日志",
+                "groups": [
+                  {
+                    "group": "版本发布",
+                    "pages": [
+                      "zh/updatelog/overview",
+                      "zh/updatelog/latest"
+                    ]
+                  }
                 ]
               }
             ]
           },
           {
-            "tab": "API 参考",
-            "groups": [
+            "version": "v1 (维护中)",
+            "tabs": [
               {
-                "group": "风险分析",
-                "pages": [
-                  "zh/api-reference/endpoint/analyze-address",
-                  "zh/api-reference/endpoint/batch-analyze",
-                  "zh/api-reference/endpoint/create-monitor",
-                  "zh/api-reference/endpoint/delete-monitor"
+                "tab": "指南",
+                "groups": [
+                  {
+                    "group": "快速开始",
+                    "pages": [
+                      "zh/index",
+                      "zh/quickstart"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "用户管理",
-                "pages": [
-                  "zh/api-reference/endpoint/user-profile",
-                  "zh/api-reference/endpoint/api-keys"
+                "tab": "API 参考",
+                "groups": [
+                  {
+                    "group": "风险分析",
+                    "pages": [
+                      "zh/api-reference/v1/analyze-address"
+                    ]
+                  },
+                  {
+                    "group": "用户管理",
+                    "pages": [
+                      "zh/api-reference/v1/user-profile"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "报告管理",
-                "pages": [
-                  "zh/api-reference/endpoint/generate-report",
-                  "zh/api-reference/endpoint/list-reports"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "更新日志",
-            "groups": [
-              {
-                "group": "版本发布",
-                "pages": [
-                  "zh/updatelog/overview",
-                  "zh/updatelog/latest"
+                "tab": "更新日志",
+                "groups": [
+                  {
+                    "group": "版本发布",
+                    "pages": [
+                      "zh/updatelog/overview",
+                      "zh/updatelog/latest"
+                    ]
+                  }
                 ]
               }
             ]
@@ -69,55 +110,96 @@
       },
       {
         "language": "en",
-        "tabs": [
+        "versions": [
           {
-            "tab": "Guide",
-            "groups": [
+            "version": "v2 (Recommended)",
+            "default": true,
+            "tabs": [
               {
-                "group": "Quick Start",
-                "pages": [
-                  "en/index",
-                  "en/quickstart"
+                "tab": "Guide",
+                "groups": [
+                  {
+                    "group": "Quick Start",
+                    "pages": [
+                      "en/index",
+                      "en/quickstart"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "API Reference",
+                "groups": [
+                  {
+                    "group": "Risk Analysis",
+                    "pages": [
+                      "en/api-reference/v2/analyze-address"
+                    ]
+                  },
+                  {
+                    "group": "User Management",
+                    "pages": [
+                      "en/api-reference/v2/user-profile"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Update Log",
+                "groups": [
+                  {
+                    "group": "Version Release",
+                    "pages": [
+                      "en/updatelog/overview",
+                      "en/updatelog/latest"
+                    ]
+                  }
                 ]
               }
             ]
           },
           {
-            "tab": "API Reference",
-            "groups": [
+            "version": "v1 (Maintenance)",
+            "tabs": [
               {
-                "group": "Risk Analysis",
-                "pages": [
-                  "en/api-reference/endpoint/analyze-address",
-                  "en/api-reference/endpoint/batch-analyze",
-                  "en/api-reference/endpoint/create-monitor",
-                  "en/api-reference/endpoint/delete-monitor"
+                "tab": "Guide",
+                "groups": [
+                  {
+                    "group": "Quick Start",
+                    "pages": [
+                      "en/index",
+                      "en/quickstart"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "User Management",
-                "pages": [
-                  "en/api-reference/endpoint/user-profile",
-                  "en/api-reference/endpoint/api-keys"
+                "tab": "API Reference",
+                "groups": [
+                  {
+                    "group": "Risk Analysis",
+                    "pages": [
+                      "en/api-reference/v1/analyze-address"
+                    ]
+                  },
+                  {
+                    "group": "User Management",
+                    "pages": [
+                      "en/api-reference/v1/user-profile"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "Report Management",
-                "pages": [
-                  "en/api-reference/endpoint/generate-report",
-                  "en/api-reference/endpoint/list-reports"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Update Log",
-            "groups": [
-              {
-                "group": "Version Release",
-                "pages": [
-                  "en/updatelog/overview",
-                  "en/updatelog/latest"
+                "tab": "Update Log",
+                "groups": [
+                  {
+                    "group": "Version Release",
+                    "pages": [
+                      "en/updatelog/overview",
+                      "en/updatelog/latest"
+                    ]
+                  }
                 ]
               }
             ]

@@ -1,0 +1,52 @@
+---
+title: "Analyze Address Risk (v2)"
+api: "POST /v2/analyze/address"
+description: "Analyze risk level and comprehensive details for a blockchain address"
+---
+
+## Request Parameters
+
+<ParamField body="address" type="string" required>
+  The blockchain address to analyze
+</ParamField>
+
+<ParamField body="chain" type="string" required>
+  Blockchain network (e.g., ethereum, bitcoin, polygon, bsc)
+</ParamField>
+
+<ParamField body="include_transactions" type="boolean" default="false">
+  Whether to include recent transaction records
+</ParamField>
+
+<ParamField body="depth" type="integer" default="1">
+  Analysis depth (1-5), higher values provide deeper analysis
+</ParamField>
+
+## Response Example
+
+```json
+{
+  "address": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+  "risk_assessment": {
+    "overall_score": 75,
+    "risk_level": "high",
+    "confidence": 0.92
+  },
+  "risk_categories": {
+    "mixer": {
+      "score": 85,
+      "evidence": ["Connected to known mixer services"]
+    },
+    "fraud": {
+      "score": 65,
+      "evidence": ["Involved in suspicious transactions"]
+    }
+  },
+  "labels": ["mixer", "high-risk", "suspicious-activity"],
+  "last_updated": "2025-12-26T08:50:00Z"
+}
+```
+
+<Tip>
+  v2 API provides more granular risk categories and evidence chains, recommended for production use
+</Tip>
