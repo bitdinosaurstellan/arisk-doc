@@ -138,15 +138,22 @@
                 "tab": "API Reference",
                 "groups": [
                   {
-                    "group": "Risk Analysis",
+                    "group": "Analysis Tasks",
                     "pages": [
-                      "en/api-reference/v2/analyze-address"
+                      "en/api-reference/v2/endpoint/analysistasklist",
+                      "en/api-reference/v2/endpoint/analysistaskcreate",
+                      "en/api-reference/v2/endpoint/analysistaskstatusget",
+                      "en/api-reference/v2/endpoint/analysistaskresultget"
                     ]
                   },
                   {
-                    "group": "User Management",
+                    "group": "Address Monitoring",
                     "pages": [
-                      "en/api-reference/v2/user-profile"
+                      "en/api-reference/v2/endpoint/monitoraddresseslist",
+                      "en/api-reference/v2/endpoint/monitoraddressesadd",
+                      "en/api-reference/v2/endpoint/monitoraddressupdate",
+                      "en/api-reference/v2/endpoint/monitoraddressesdelete",
+                      "en/api-reference/v2/endpoint/monitoralertslist"
                     ]
                   }
                 ]

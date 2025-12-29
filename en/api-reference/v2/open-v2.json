@@ -1,0 +1,1437 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "V2 API Reference",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "tags": [],
+    "paths": {
+        "/v2/analysis/tasks": {
+            "get": {
+                "summary": "AnalysisTaskList",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/AnalysisAnalysisTaskList",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number (starting from 1, default 1)",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "Page size (default 20, max 100)",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "tasks": {
+                                            "description": "Task list",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "required": [
+                                                    "task_id",
+                                                    "chain",
+                                                    "token",
+                                                    "address",
+                                                    "status",
+                                                    "risk_level",
+                                                    "created_at",
+                                                    "updated_at",
+                                                    "start_time",
+                                                    "end_time",
+                                                    "count_limit",
+                                                    "started_at",
+                                                    "completed_at"
+                                                ],
+                                                "properties": {
+                                                    "address": {
+                                                        "description": "Query address",
+                                                        "type": "string"
+                                                    },
+                                                    "chain": {
+                                                        "description": "Chain identifier",
+                                                        "type": "string"
+                                                    },
+                                                    "completed_at": {
+                                                        "description": "Analysis completion time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "count_limit": {
+                                                        "description": "Transaction count limit (0 for unlimited)",
+                                                        "type": "integer"
+                                                    },
+                                                    "created_at": {
+                                                        "description": "Creation time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "end_time": {
+                                                        "description": "Query end time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "risk_level": {
+                                                        "description": "Risk level",
+                                                        "type": "integer"
+                                                    },
+                                                    "start_time": {
+                                                        "description": "Query start time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "started_at": {
+                                                        "description": "Analysis start time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "status": {
+                                                        "description": "Task status",
+                                                        "type": "integer"
+                                                    },
+                                                    "task_id": {
+                                                        "description": "Task ID",
+                                                        "type": "string"
+                                                    },
+                                                    "token": {
+                                                        "description": "Token symbol",
+                                                        "type": "string"
+                                                    },
+                                                    "updated_at": {
+                                                        "description": "Update time (RFC3339)",
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "total": {
+                                            "description": "Total count",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            },
+            "post": {
+                "summary": "AnalysisTaskCreate",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/AnalysisAnalysisTaskCreate",
+                "tags": [],
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "chain",
+                                    "token",
+                                    "address"
+                                ],
+                                "properties": {
+                                    "address": {
+                                        "description": "Query address",
+                                        "type": "string"
+                                    },
+                                    "chain": {
+                                        "description": "Chain identifier (e.g., tron/ethereum)",
+                                        "type": "string"
+                                    },
+                                    "count_limit": {
+                                        "description": "Transaction count limit (0 for unlimited)",
+                                        "type": "integer"
+                                    },
+                                    "end_time": {
+                                        "description": "End time (RFC3339, optional, auto-derived by default)",
+                                        "type": "string"
+                                    },
+                                    "metrics": {
+                                        "description": "Analysis metrics list, empty or missing means all",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "start_time": {
+                                        "description": "Start time (RFC3339, optional, auto-derived by default)",
+                                        "type": "string"
+                                    },
+                                    "token": {
+                                        "description": "Token symbol (e.g., usdt)",
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "estimated_credits": {
+                                            "description": "Estimated credits to be consumed",
+                                            "type": "integer"
+                                        },
+                                        "metrics": {
+                                            "description": "List of metrics actually analyzed",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "task_id": {
+                                            "description": "Task ID",
+                                            "type": "string"
+                                        },
+                                        "tx_count": {
+                                            "description": "Number of transactions",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/analysis/tasks/{taskId}/result": {
+            "get": {
+                "summary": "AnalysisTaskResultGet",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/AnalysisAnalysisTaskResultGet",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "taskId",
+                        "in": "path",
+                        "description": "Task ID",
+                        "required": true,
+                        "example": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "result": {
+                                            "description": "Analysis result",
+                                            "type": "object",
+                                            "required": [
+                                                "chain",
+                                                "token",
+                                                "address",
+                                                "created_at",
+                                                "start_time",
+                                                "end_time",
+                                                "task_id",
+                                                "count_limit",
+                                                "started_at",
+                                                "completed_at",
+                                                "risk_level",
+                                                "risk_address_data",
+                                                "risk_type",
+                                                "overview",
+                                                "tx_flow",
+                                                "habit",
+                                                "historical_balance",
+                                                "top_transaction"
+                                            ],
+                                            "properties": {
+                                                "address": {
+                                                    "description": "Address",
+                                                    "type": "string"
+                                                },
+                                                "chain": {
+                                                    "description": "Chain identifier",
+                                                    "type": "string"
+                                                },
+                                                "completed_at": {
+                                                    "description": "Analysis completion time (RFC3339)",
+                                                    "type": "string"
+                                                },
+                                                "count_limit": {
+                                                    "description": "Transaction count limit (0 for unlimited)",
+                                                    "type": "integer"
+                                                },
+                                                "created_at": {
+                                                    "description": "Creation time (RFC3339)",
+                                                    "type": "string"
+                                                },
+                                                "end_time": {
+                                                    "description": "Query end time (RFC3339)",
+                                                    "type": "string"
+                                                },
+                                                "habit": {
+                                                    "description": "Trading habits",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "items"
+                                                    ],
+                                                    "properties": {
+                                                        "items": {
+                                                            "description": "List",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "hour",
+                                                                    "inflow",
+                                                                    "outflow"
+                                                                ],
+                                                                "properties": {
+                                                                    "hour": {
+                                                                        "description": "Hour (0~23)",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "inflow": {
+                                                                        "description": "Inflow",
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "amount",
+                                                                            "count"
+                                                                        ],
+                                                                        "properties": {
+                                                                            "amount": {
+                                                                                "description": "Amount",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "count": {
+                                                                                "description": "Count",
+                                                                                "type": "integer"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "outflow": {
+                                                                        "description": "Outflow",
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "amount",
+                                                                            "count"
+                                                                        ],
+                                                                        "properties": {
+                                                                            "amount": {
+                                                                                "description": "Amount",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "count": {
+                                                                                "description": "Count",
+                                                                                "type": "integer"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "historical_balance": {
+                                                    "description": "Historical balance",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "items"
+                                                    ],
+                                                    "properties": {
+                                                        "items": {
+                                                            "description": "List",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "date",
+                                                                    "balance"
+                                                                ],
+                                                                "properties": {
+                                                                    "balance": {
+                                                                        "description": "Balance",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "date": {
+                                                                        "description": "Date (RFC3339)",
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "overview": {
+                                                    "description": "Address overview",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "address",
+                                                        "balance",
+                                                        "balance_coin",
+                                                        "active",
+                                                        "in_info",
+                                                        "out_info",
+                                                        "total_info",
+                                                        "type",
+                                                        "exchange_name",
+                                                        "first_transfer_time",
+                                                        "first_transfer_address",
+                                                        "is_blocked",
+                                                        "is_sanction"
+                                                    ],
+                                                    "properties": {
+                                                        "active": {
+                                                            "description": "Whether active",
+                                                            "type": "boolean"
+                                                        },
+                                                        "address": {
+                                                            "description": "Address",
+                                                            "type": "string"
+                                                        },
+                                                        "balance": {
+                                                            "description": "Balance",
+                                                            "type": "string"
+                                                        },
+                                                        "balance_coin": {
+                                                            "description": "Balance currency",
+                                                            "type": "string"
+                                                        },
+                                                        "exchange_name": {
+                                                            "description": "Exchange name",
+                                                            "type": "string"
+                                                        },
+                                                        "first_transfer_address": {
+                                                            "description": "First counterparty address",
+                                                            "type": "string"
+                                                        },
+                                                        "first_transfer_time": {
+                                                            "description": "First transfer time (RFC3339)",
+                                                            "type": "string"
+                                                        },
+                                                        "in_info": {
+                                                            "description": "Inflow information",
+                                                            "type": "object",
+                                                            "required": [
+                                                                "data",
+                                                                "latest"
+                                                            ],
+                                                            "properties": {
+                                                                "data": {
+                                                                    "description": "Data",
+                                                                    "type": "object",
+                                                                    "required": [
+                                                                        "amount",
+                                                                        "count"
+                                                                    ],
+                                                                    "properties": {
+                                                                        "amount": {
+                                                                            "description": "Amount",
+                                                                            "type": "string"
+                                                                        },
+                                                                        "count": {
+                                                                            "description": "Count",
+                                                                            "type": "integer"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "latest": {
+                                                                    "description": "Latest time (RFC3339)",
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "is_blocked": {
+                                                            "description": "Whether blocked",
+                                                            "type": "boolean"
+                                                        },
+                                                        "is_sanction": {
+                                                            "description": "Whether sanctioned",
+                                                            "type": "boolean"
+                                                        },
+                                                        "out_info": {
+                                                            "description": "Outflow information",
+                                                            "type": "object",
+                                                            "required": [
+                                                                "data",
+                                                                "latest"
+                                                            ],
+                                                            "properties": {
+                                                                "data": {
+                                                                    "description": "Data",
+                                                                    "type": "object",
+                                                                    "required": [
+                                                                        "amount",
+                                                                        "count"
+                                                                    ],
+                                                                    "properties": {
+                                                                        "amount": {
+                                                                            "description": "Amount",
+                                                                            "type": "string"
+                                                                        },
+                                                                        "count": {
+                                                                            "description": "Count",
+                                                                            "type": "integer"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "latest": {
+                                                                    "description": "Latest time (RFC3339)",
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "total_info": {
+                                                            "description": "Summary information",
+                                                            "type": "object",
+                                                            "required": [
+                                                                "data",
+                                                                "latest"
+                                                            ],
+                                                            "properties": {
+                                                                "data": {
+                                                                    "description": "Data",
+                                                                    "type": "object",
+                                                                    "required": [
+                                                                        "amount",
+                                                                        "count"
+                                                                    ],
+                                                                    "properties": {
+                                                                        "amount": {
+                                                                            "description": "Amount",
+                                                                            "type": "string"
+                                                                        },
+                                                                        "count": {
+                                                                            "description": "Count",
+                                                                            "type": "integer"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                "latest": {
+                                                                    "description": "Latest time (RFC3339)",
+                                                                    "type": "string"
+                                                                }
+                                                            }
+                                                        },
+                                                        "type": {
+                                                            "description": "Address type",
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "risk_address_data": {
+                                                    "description": "Risk address summary",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "data",
+                                                        "address_count"
+                                                    ],
+                                                    "properties": {
+                                                        "address_count": {
+                                                            "description": "Address count",
+                                                            "type": "integer"
+                                                        },
+                                                        "data": {
+                                                            "description": "Data",
+                                                            "type": "object",
+                                                            "required": [
+                                                                "amount",
+                                                                "count"
+                                                            ],
+                                                            "properties": {
+                                                                "amount": {
+                                                                    "description": "Amount",
+                                                                    "type": "string"
+                                                                },
+                                                                "count": {
+                                                                    "description": "Count",
+                                                                    "type": "integer"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "risk_level": {
+                                                    "description": "Risk level",
+                                                    "type": "integer"
+                                                },
+                                                "risk_type": {
+                                                    "description": "Risk type statistics",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "items"
+                                                    ],
+                                                    "properties": {
+                                                        "items": {
+                                                            "description": "List",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "type",
+                                                                    "data"
+                                                                ],
+                                                                "properties": {
+                                                                    "data": {
+                                                                        "description": "Data",
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "amount",
+                                                                            "count"
+                                                                        ],
+                                                                        "properties": {
+                                                                            "amount": {
+                                                                                "description": "Amount",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "count": {
+                                                                                "description": "Count",
+                                                                                "type": "integer"
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    "type": {
+                                                                        "description": "Risk type",
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "start_time": {
+                                                    "description": "Query start time (RFC3339)",
+                                                    "type": "string"
+                                                },
+                                                "started_at": {
+                                                    "description": "Analysis start time (RFC3339)",
+                                                    "type": "string"
+                                                },
+                                                "task_id": {
+                                                    "description": "Task ID",
+                                                    "type": "string"
+                                                },
+                                                "token": {
+                                                    "description": "Token symbol",
+                                                    "type": "string"
+                                                },
+                                                "top_transaction": {
+                                                    "description": "Top counterparties",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "items"
+                                                    ],
+                                                    "properties": {
+                                                        "items": {
+                                                            "description": "List",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "own_address",
+                                                                    "counterparty_address",
+                                                                    "total",
+                                                                    "last_transaction_time"
+                                                                ],
+                                                                "properties": {
+                                                                    "counterparty_address": {
+                                                                        "description": "Counterparty address",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "last_transaction_time": {
+                                                                        "description": "Latest transaction time (RFC3339)",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "own_address": {
+                                                                        "description": "Own address",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "total": {
+                                                                        "description": "Summary",
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "amount",
+                                                                            "count"
+                                                                        ],
+                                                                        "properties": {
+                                                                            "amount": {
+                                                                                "description": "Amount",
+                                                                                "type": "string"
+                                                                            },
+                                                                            "count": {
+                                                                                "description": "Count",
+                                                                                "type": "integer"
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "tx_flow": {
+                                                    "description": "Fund flow",
+                                                    "type": "object",
+                                                    "required": [
+                                                        "nodes",
+                                                        "links"
+                                                    ],
+                                                    "properties": {
+                                                        "links": {
+                                                            "description": "Links",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "source",
+                                                                    "target",
+                                                                    "value"
+                                                                ],
+                                                                "properties": {
+                                                                    "source": {
+                                                                        "description": "Source node",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "target": {
+                                                                        "description": "Target node",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "value": {
+                                                                        "description": "Amount",
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "nodes": {
+                                                            "description": "Nodes",
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "required": [
+                                                                    "id",
+                                                                    "label"
+                                                                ],
+                                                                "properties": {
+                                                                    "id": {
+                                                                        "description": "Node ID",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "label": {
+                                                                        "description": "Label",
+                                                                        "type": "string"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/analysis/tasks/{taskId}/status": {
+            "get": {
+                "summary": "AnalysisTaskStatusGet",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/AnalysisAnalysisTaskStatusGet",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "taskId",
+                        "in": "path",
+                        "description": "Task ID",
+                        "required": true,
+                        "example": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "created_at": {
+                                            "description": "Creation time (RFC3339)",
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "description": "Status description or error message",
+                                            "type": "string"
+                                        },
+                                        "metrics": {
+                                            "description": "List of metrics analyzed in this task",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "status": {
+                                            "description": "Task status: 0-Pending, 1-Processing, 2-Completed, 3-Failed",
+                                            "type": "integer"
+                                        },
+                                        "updated_at": {
+                                            "description": "Update time (RFC3339)",
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/monitor/addresses": {
+            "get": {
+                "summary": "MonitorAddressesList",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/MonitorMonitorAddressesList",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "chain",
+                        "in": "query",
+                        "description": "Chain name",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Token symbol",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "description": "Status filter: 1-Enabled 2-Paused (0 for no filter)",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "Page size",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": 20
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "addresses": {
+                                            "description": "Address list",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "required": [
+                                                    "address_id",
+                                                    "chain",
+                                                    "token",
+                                                    "address",
+                                                    "name",
+                                                    "status",
+                                                    "user_id",
+                                                    "created_at",
+                                                    "updated_at",
+                                                    "alert_count",
+                                                    "last_alert_at"
+                                                ],
+                                                "properties": {
+                                                    "address": {
+                                                        "description": "Address",
+                                                        "type": "string"
+                                                    },
+                                                    "address_id": {
+                                                        "description": "Address ID",
+                                                        "type": "string"
+                                                    },
+                                                    "alert_count": {
+                                                        "description": "Number of alerts generated",
+                                                        "type": "integer"
+                                                    },
+                                                    "chain": {
+                                                        "description": "Chain name",
+                                                        "type": "string"
+                                                    },
+                                                    "created_at": {
+                                                        "description": "Creation time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "last_alert_at": {
+                                                        "description": "Latest alert time (RFC3339, potentially empty)",
+                                                        "type": "string"
+                                                    },
+                                                    "name": {
+                                                        "description": "Name (Display name)",
+                                                        "type": "string"
+                                                    },
+                                                    "status": {
+                                                        "description": "Status: 1-Enabled 2-Paused 3-Deleted",
+                                                        "type": "integer"
+                                                    },
+                                                    "token": {
+                                                        "description": "Token symbol",
+                                                        "type": "string"
+                                                    },
+                                                    "updated_at": {
+                                                        "description": "Update time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "user_id": {
+                                                        "description": "Created user",
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "total": {
+                                            "description": "Total count",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            },
+            "post": {
+                "summary": "MonitorAddressesAdd",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/MonitorMonitorAddressesAdd",
+                "tags": [],
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "chain",
+                                    "token",
+                                    "addresses"
+                                ],
+                                "properties": {
+                                    "addresses": {
+                                        "description": "Address list",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "required": [
+                                                "address"
+                                            ],
+                                            "properties": {
+                                                "address": {
+                                                    "description": "Address",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Name",
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "chain": {
+                                        "description": "Chain name",
+                                        "type": "string"
+                                    },
+                                    "token": {
+                                        "description": "Token symbol",
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "added": {
+                                            "description": "Number of addresses successfully added",
+                                            "type": "integer"
+                                        },
+                                        "addresses": {
+                                            "description": "Newly created address entities",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "required": [
+                                                    "address_id",
+                                                    "chain",
+                                                    "token",
+                                                    "address",
+                                                    "name",
+                                                    "status",
+                                                    "user_id",
+                                                    "created_at",
+                                                    "updated_at",
+                                                    "alert_count",
+                                                    "last_alert_at"
+                                                ],
+                                                "properties": {
+                                                    "address": {
+                                                        "description": "Address",
+                                                        "type": "string"
+                                                    },
+                                                    "address_id": {
+                                                        "description": "Address ID",
+                                                        "type": "string"
+                                                    },
+                                                    "alert_count": {
+                                                        "description": "Number of alerts generated",
+                                                        "type": "integer"
+                                                    },
+                                                    "chain": {
+                                                        "description": "Chain name",
+                                                        "type": "string"
+                                                    },
+                                                    "created_at": {
+                                                        "description": "Creation time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "last_alert_at": {
+                                                        "description": "Latest alert time (RFC3339, potentially empty)",
+                                                        "type": "string"
+                                                    },
+                                                    "name": {
+                                                        "description": "Name (Display name)",
+                                                        "type": "string"
+                                                    },
+                                                    "status": {
+                                                        "description": "Status: 1-Enabled 2-Paused 3-Deleted",
+                                                        "type": "integer"
+                                                    },
+                                                    "token": {
+                                                        "description": "Token symbol",
+                                                        "type": "string"
+                                                    },
+                                                    "updated_at": {
+                                                        "description": "Update time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "user_id": {
+                                                        "description": "Created user",
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "failed": {
+                                            "description": "Invalid or failed addresses",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "skipped": {
+                                            "description": "Number of addresses skipped (already exist)",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/monitor/addresses/delete": {
+            "post": {
+                "summary": "MonitorAddressesDelete",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/MonitorMonitorAddressesDelete",
+                "tags": [],
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "address_ids"
+                                ],
+                                "properties": {
+                                    "address_ids": {
+                                        "description": "List of address IDs to be deleted",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "deleted": {
+                                            "description": "Number of addresses actually deleted",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/monitor/addresses/{addressId}": {
+            "put": {
+                "summary": "MonitorAddressUpdate",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/MonitorMonitorAddressUpdate",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "addressId",
+                        "in": "path",
+                        "description": "Address ID",
+                        "required": true,
+                        "example": "",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "description": "New name",
+                                        "type": "string"
+                                    },
+                                    "status": {
+                                        "description": "New status (1-Enabled 2-Paused, 0 for no change)",
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "success": {
+                                            "description": "Whether the update was successful",
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/v2/monitor/alerts": {
+            "get": {
+                "summary": "MonitorAlertsList",
+                "deprecated": false,
+                "description": "",
+                "operationId": "open/V2/MonitorMonitorAlertsList",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "address_id",
+                        "in": "query",
+                        "description": "Address ID filter",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "event_type",
+                        "in": "query",
+                        "description": "Event type filter: TRANSACTION_IN/TRANSACTION_OUT/TRANSACTION_RISK/ADDRESS_RISK_CHANGE",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "start_time",
+                        "in": "query",
+                        "description": "Start time (RFC3339)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "end_time",
+                        "in": "query",
+                        "description": "End time (RFC3339)",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "Page size",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": 20
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "alerts": {
+                                            "description": "Alert list",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "required": [
+                                                    "alert_id",
+                                                    "address_id",
+                                                    "chain",
+                                                    "token",
+                                                    "monitored_address",
+                                                    "event_type",
+                                                    "event_id",
+                                                    "details",
+                                                    "monitor_label",
+                                                    "push_results",
+                                                    "created_at"
+                                                ],
+                                                "properties": {
+                                                    "address_id": {
+                                                        "description": "Associated address ID",
+                                                        "type": "string"
+                                                    },
+                                                    "alert_id": {
+                                                        "description": "Alert ID",
+                                                        "type": "string"
+                                                    },
+                                                    "chain": {
+                                                        "description": "Chain name",
+                                                        "type": "string"
+                                                    },
+                                                    "created_at": {
+                                                        "description": "Creation time (RFC3339)",
+                                                        "type": "string"
+                                                    },
+                                                    "details": {
+                                                        "description": "Event details (structured JSON, no plain text)",
+                                                        "type": "object",
+                                                        "required": [
+                                                            "type",
+                                                            "timestamp",
+                                                            "data"
+                                                        ],
+                                                        "properties": {
+                                                            "data": {
+                                                                "description": "Event data (varies by type, see schema above)",
+                                                                "type": "object",
+                                                                "additionalProperties": {},
+                                                                "properties": {}
+                                                            },
+                                                            "timestamp": {
+                                                                "description": "RFC3339",
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "description": "Event type enum",
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "event_id": {
+                                                        "description": "Unique event identifier",
+                                                        "type": "string"
+                                                    },
+                                                    "event_type": {
+                                                        "description": "Event type: TRANSACTION_IN/TRANSACTION_OUT/TRANSACTION_RISK/ADDRESS_RISK_CHANGE",
+                                                        "type": "string"
+                                                    },
+                                                    "monitor_label": {
+                                                        "description": "Monitored address label",
+                                                        "type": "string"
+                                                    },
+                                                    "monitored_address": {
+                                                        "description": "Monitored address",
+                                                        "type": "string"
+                                                    },
+                                                    "push_results": {
+                                                        "description": "Channel push results",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "email_status": {
+                                                                "description": "Email push status: pending/sending/partial/success/failed/none",
+                                                                "type": "string"
+                                                            },
+                                                            "lark_status": {
+                                                                "description": "Lark push status",
+                                                                "type": "string"
+                                                            },
+                                                            "webhook_status": {
+                                                                "description": "Webhook push status: pending/sending/partial/success/failed/none",
+                                                                "type": "string"
+                                                            },
+                                                            "wecom_status": {
+                                                                "description": "WeCom push status",
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    },
+                                                    "token": {
+                                                        "description": "Token symbol",
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "total": {
+                                            "description": "Total count",
+                                            "type": "integer"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {},
+        "responses": {},
+        "securitySchemes": {}
+    },
+    "servers": [],
+    "security": []
+}
