@@ -1432,6 +1432,10 @@
         "responses": {},
         "securitySchemes": {}
     },
-    "servers": [],
+    "servers": [
+        {
+            "url": "https://api.arisk.io"
+        }
+    ],
     "security": []
 }
