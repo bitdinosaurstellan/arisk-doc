@@ -83,12 +83,6 @@
                       "zh/api-reference/v1/endpoint/queryresult",
                       "zh/api-reference/v1/endpoint/querystatus"
                     ]
-                  },
-                  {
-                    "group": "用户管理",
-                    "pages": [
-                      "zh/api-reference/v1/user-profile"
-                    ]
                   }
                 ]
               },
@@ -180,12 +174,6 @@
                       "en/api-reference/v1/endpoint/queryhistories",
                       "en/api-reference/v1/endpoint/queryresult",
                       "en/api-reference/v1/endpoint/querystatus"
-                    ]
-                  },
-                  {
-                    "group": "User Management",
-                    "pages": [
-                      "en/api-reference/v1/user-profile"
                     ]
                   }
                 ]
