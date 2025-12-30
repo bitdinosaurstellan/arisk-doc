@@ -9,7 +9,7 @@
     "paths": {
         "/v2/analysis/tasks": {
             "get": {
-                "summary": "AnalysisTaskList",
+                "summary": "List Analysis Tasks",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/AnalysisAnalysisTaskList",
@@ -132,7 +132,7 @@
                 "security": []
             },
             "post": {
-                "summary": "AnalysisTaskCreate",
+                "summary": "Create Analysis Task",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/AnalysisAnalysisTaskCreate",
@@ -225,7 +225,7 @@
         },
         "/v2/analysis/tasks/{taskId}/result": {
             "get": {
-                "summary": "AnalysisTaskResultGet",
+                "summary": "Get Analysis Task Result",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/AnalysisAnalysisTaskResultGet",
@@ -769,7 +769,7 @@
         },
         "/v2/analysis/tasks/{taskId}/status": {
             "get": {
-                "summary": "AnalysisTaskStatusGet",
+                "summary": "Get Analysis Task Status",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/AnalysisAnalysisTaskStatusGet",
@@ -829,7 +829,7 @@
         },
         "/v2/monitor/addresses": {
             "get": {
-                "summary": "MonitorAddressesList",
+                "summary": "List Monitored Addresses",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/MonitorMonitorAddressesList",
@@ -971,7 +971,7 @@
                 "security": []
             },
             "post": {
-                "summary": "MonitorAddressesAdd",
+                "summary": "Add Monitored Addresses",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/MonitorMonitorAddressesAdd",
@@ -1123,7 +1123,7 @@
         },
         "/v2/monitor/addresses/delete": {
             "post": {
-                "summary": "MonitorAddressesDelete",
+                "summary": "Delete Monitored Addresses",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/MonitorMonitorAddressesDelete",
@@ -1175,7 +1175,7 @@
         },
         "/v2/monitor/addresses/{addressId}": {
             "put": {
-                "summary": "MonitorAddressUpdate",
+                "summary": "Update Monitored Address",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/MonitorMonitorAddressUpdate",
@@ -1236,7 +1236,7 @@
         },
         "/v2/monitor/alerts": {
             "get": {
-                "summary": "MonitorAlertsList",
+                "summary": "List Monitor Alerts",
                 "deprecated": false,
                 "description": "",
                 "operationId": "open/V2/MonitorMonitorAlertsList",

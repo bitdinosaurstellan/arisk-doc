@@ -49,7 +49,7 @@
     },
     "/v1/monitor/address/list": {
       "get": {
-        "summary": "Monitored Address List",
+        "summary": "List Monitored Addresses",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1MonitorAddressList",
@@ -284,7 +284,7 @@
     },
     "/v1/monitor/alerts": {
       "get": {
-        "summary": "Alert List",
+        "summary": "List Alerts",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1MonitorAlerts",
@@ -421,7 +421,7 @@
     },
     "/v1/monitor/config/default": {
       "get": {
-        "summary": "Get Default Monitoring Config",
+        "summary": "Get Default Monitoring Configuration",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1MonitorConfigGet",
@@ -530,7 +530,7 @@
         "security": []
       },
       "post": {
-        "summary": "Set Default Monitoring Config",
+        "summary": "Set Default Monitoring Configuration",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1MonitorConfigSet",
@@ -741,7 +741,7 @@
     },
     "/v1/monitor/config/update": {
       "post": {
-        "summary": "Update Monitoring Config",
+        "summary": "Update Monitoring Configuration",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1MonitorConfigUpdate",
@@ -790,7 +790,7 @@
     },
     "/v1/monitor/risk-change-alerts": {
       "get": {
-        "summary": "Risk Change Alerts",
+        "summary": "List Risk Change Alerts",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/MonitorOpenV1RiskChangeAlerts",
@@ -972,7 +972,7 @@
     },
     "/v1/query/histories": {
       "get": {
-        "summary": "Query History",
+        "summary": "List Query History",
         "deprecated": false,
         "description": "",
         "operationId": "open/V1/QueryOpenV1QueryHistories",
