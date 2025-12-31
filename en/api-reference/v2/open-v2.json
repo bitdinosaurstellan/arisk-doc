@@ -9,10 +9,10 @@
         "schemas": {},
         "responses": {},
         "securitySchemes": {
-            "api_key": {
+            "apikey-header-X-API-Key": {
                 "type": "apiKey",
-                "name": "X-API-Key",
-                "in": "header"
+                "in": "header",
+                "name": "X-API-Key"
             }
         }
     },
@@ -23,7 +23,7 @@
     ],
     "security": [
         {
-            "api_key": []
+            "apikey-header-X-API-Key": []
         }
     ],
     "tags": [],
@@ -149,8 +149,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             },
             "post": {
                 "summary": "Create Analysis Task",
@@ -240,8 +239,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/analysis/tasks/{taskId}/result": {
@@ -784,8 +782,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/analysis/tasks/{taskId}/status": {
@@ -844,8 +841,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/monitor/addresses": {
@@ -988,8 +984,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             },
             "post": {
                 "summary": "Add Monitored Addresses",
@@ -1138,8 +1133,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/monitor/addresses/delete": {
@@ -1190,8 +1184,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/monitor/addresses/{addressId}": {
@@ -1251,8 +1244,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         },
         "/v2/monitor/alerts": {
@@ -1443,8 +1435,7 @@
                         },
                         "headers": {}
                     }
-                },
-                "security": []
+                }
             }
         }
     }

@@ -32,10 +32,10 @@
     },
     "responses": {},
     "securitySchemes": {
-      "api_key": {
+      "apikey-header-X-API-Key": {
         "type": "apiKey",
-        "name": "X-API-Key",
-        "in": "header"
+        "in": "header",
+        "name": "X-API-Key"
       }
     }
   },
@@ -46,7 +46,7 @@
   ],
   "security": [
     {
-      "api_key": []
+      "apikey-header-X-API-Key": []
     }
   ],
   "tags": [],
@@ -87,8 +87,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/address/list": {
@@ -218,8 +217,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/address/remove": {
@@ -258,8 +256,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/address/status/update": {
@@ -322,8 +319,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/alerts": {
@@ -459,8 +455,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/config/default": {
@@ -570,8 +565,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       },
       "post": {
         "summary": "设置默认监控配置",
@@ -779,8 +773,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/config/update": {
@@ -828,8 +821,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/monitor/risk-change-alerts": {
@@ -939,8 +931,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/query/create": {
@@ -1010,8 +1001,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/query/histories": {
@@ -1144,8 +1134,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/query/result": {
@@ -1536,8 +1525,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     },
     "/v1/query/status": {
@@ -1596,8 +1584,7 @@
             },
             "headers": {}
           }
-        },
-        "security": []
+        }
       }
     }
   }
