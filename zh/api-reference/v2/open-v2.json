@@ -98,11 +98,13 @@
                           },
                           "completed_at": {
                             "description": "分析完成时间(RFC3339)",
-                            "type": "string"
+                            "type": "string",
+                            "example": "2023-10-27T10:00:00Z"
                           },
                           "count_limit": {
                             "description": "查询限制交易数(0 表示不限制)",
-                            "type": "integer"
+                            "type": "integer",
+                            "example": 0
                           },
                           "created_at": {
                             "description": "创建时间(RFC3339)",
@@ -111,7 +113,8 @@
                           },
                           "end_time": {
                             "description": "查询结束时间(RFC3339)",
-                            "type": "string"
+                            "type": "string",
+                            "example": "2023-10-27T10:00:00Z"
                           },
                           "risk_level": {
                             "description": "风险等级",
@@ -120,16 +123,18 @@
                           },
                           "start_time": {
                             "description": "查询起始时间(RFC3339)",
-                            "type": "string"
+                            "type": "string",
+                            "example": "2023-10-27T10:00:00Z"
                           },
                           "started_at": {
                             "description": "分析开始时间(RFC3339)",
-                            "type": "string"
+                            "type": "string",
+                            "example": "2023-10-27T10:00:00Z"
                           },
                           "status": {
                             "description": "任务状态",
                             "type": "integer",
-                            "example": 1
+                            "example": 2
                           },
                           "task_id": {
                             "description": "任务ID",
@@ -143,7 +148,8 @@
                           },
                           "updated_at": {
                             "description": "更新时间(RFC3339)",
-                            "type": "string"
+                            "type": "string",
+                            "example": "2023-10-27T10:00:00Z"
                           }
                         }
                       }
@@ -196,11 +202,13 @@
                   },
                   "count_limit": {
                     "description": "交易数量限制(0 表示不限制)",
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 0
                   },
                   "end_time": {
                     "description": "结束时间(RFC3339，选填，默认自动推导)",
-                    "type": "string"
+                    "type": "string",
+                    "example": "2023-10-27T10:00:00Z"
                   },
                   "metrics": {
                     "description": "分析指标列表，空或缺省表示全部",
@@ -212,7 +220,8 @@
                   },
                   "start_time": {
                     "description": "开始时间(RFC3339，选填，默认自动推导)",
-                    "type": "string"
+                    "type": "string",
+                    "example": "2023-10-27T10:00:00Z"
                   },
                   "token": {
                     "description": "代币符号(如 usdt)",
@@ -242,7 +251,8 @@
                       "description": "实际分析的指标列表",
                       "type": "array",
                       "items": {
-                        "type": "string"
+                        "type": "string",
+                        "example": "overview"
                       }
                     },
                     "task_id": {
@@ -252,7 +262,8 @@
                     },
                     "tx_count": {
                       "description": "交易数量",
-                      "type": "integer"
+                      "type": "integer",
+                      "example": 100
                     }
                   }
                 }
@@ -318,28 +329,32 @@
                         "address": {
                           "description": "地址",
                           "type": "string",
-                          "example": "1"
+                          "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                         },
                         "chain": {
                           "description": "链标识",
                           "type": "string",
-                          "example": "1"
+                          "example": "ethereum"
                         },
                         "completed_at": {
                           "description": "分析完成时间(RFC3339)",
-                          "type": "string"
+                          "type": "string",
+                          "example": "2023-10-27T10:00:00Z"
                         },
                         "count_limit": {
                           "description": "查询限制交易数(0 表示不限制)",
-                          "type": "integer"
+                          "type": "integer",
+                          "example": 0
                         },
                         "created_at": {
                           "description": "创建时间(RFC3339)",
-                          "type": "string"
+                          "type": "string",
+                          "example": "2023-10-27T10:00:00Z"
                         },
                         "end_time": {
                           "description": "查询结束时间(RFC3339)",
-                          "type": "string"
+                          "type": "string",
+                          "example": "2023-10-27T10:00:00Z"
                         },
                         "habit": {
                           "description": "交易习惯",
@@ -361,7 +376,8 @@
                                 "properties": {
                                   "hour": {
                                     "description": "小时(0~23)",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "0"
                                   },
                                   "inflow": {
                                     "description": "流入",
@@ -373,11 +389,13 @@
                                     "properties": {
                                       "amount": {
                                         "description": "金额",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "100.0"
                                       },
                                       "count": {
                                         "description": "笔数",
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "example": 10
                                       }
                                     }
                                   },
@@ -391,11 +409,13 @@
                                     "properties": {
                                       "amount": {
                                         "description": "金额",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "100.0"
                                       },
                                       "count": {
                                         "description": "笔数",
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "example": 10
                                       }
                                     }
                                   }
@@ -423,11 +443,13 @@
                                 "properties": {
                                   "balance": {
                                     "description": "余额",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "1000.0"
                                   },
                                   "date": {
                                     "description": "日期(RFC3339)",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "2023-01-01"
                                   }
                                 }
                               }
@@ -455,31 +477,38 @@
                           "properties": {
                             "active": {
                               "description": "是否活跃",
-                              "type": "boolean"
+                              "type": "boolean",
+                              "example": true
                             },
                             "address": {
                               "description": "地址",
-                              "type": "string"
+                              "type": "string",
+                              "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                             },
                             "balance": {
                               "description": "余额",
-                              "type": "string"
+                              "type": "string",
+                              "example": "100.0"
                             },
                             "balance_coin": {
                               "description": "余额币种",
-                              "type": "string"
+                              "type": "string",
+                              "example": "USDT"
                             },
                             "exchange_name": {
                               "description": "交易所名称",
-                              "type": "string"
+                              "type": "string",
+                              "example": "Binance"
                             },
                             "first_transfer_address": {
                               "description": "首次转账对手地址",
-                              "type": "string"
+                              "type": "string",
+                              "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                             },
                             "first_transfer_time": {
                               "description": "首次转账时间(RFC3339)",
-                              "type": "string"
+                              "type": "string",
+                              "example": "2023-10-27T10:00:00Z"
                             },
                             "in_info": {
                               "description": "流入信息",
@@ -499,27 +528,32 @@
                                   "properties": {
                                     "amount": {
                                       "description": "金额",
-                                      "type": "string"
+                                      "type": "string",
+                                      "example": "100.0"
                                     },
                                     "count": {
                                       "description": "笔数",
-                                      "type": "integer"
+                                      "type": "integer",
+                                      "example": 10
                                     }
                                   }
                                 },
                                 "latest": {
                                   "description": "最近一次时间(RFC3339)",
-                                  "type": "string"
+                                  "type": "string",
+                                  "example": "2023-10-27T10:00:00Z"
                                 }
                               }
                             },
                             "is_blocked": {
                               "description": "是否被封禁",
-                              "type": "boolean"
+                              "type": "boolean",
+                              "example": true
                             },
                             "is_sanction": {
                               "description": "是否被制裁",
-                              "type": "boolean"
+                              "type": "boolean",
+                              "example": false
                             },
                             "out_info": {
                               "description": "流出信息",
@@ -539,17 +573,20 @@
                                   "properties": {
                                     "amount": {
                                       "description": "金额",
-                                      "type": "string"
+                                      "type": "string",
+                                      "example": "50.0"
                                     },
                                     "count": {
                                       "description": "笔数",
-                                      "type": "integer"
+                                      "type": "integer",
+                                      "example": 5
                                     }
                                   }
                                 },
                                 "latest": {
                                   "description": "最近一次时间(RFC3339)",
-                                  "type": "string"
+                                  "type": "string",
+                                  "example": "2023-10-27T10:00:00Z"
                                 }
                               }
                             },
@@ -571,23 +608,27 @@
                                   "properties": {
                                     "amount": {
                                       "description": "金额",
-                                      "type": "string"
+                                      "type": "string",
+                                      "example": "150.0"
                                     },
                                     "count": {
                                       "description": "笔数",
-                                      "type": "integer"
+                                      "type": "integer",
+                                      "example": 15
                                     }
                                   }
                                 },
                                 "latest": {
                                   "description": "最近一次时间(RFC3339)",
-                                  "type": "string"
+                                  "type": "string",
+                                  "example": "2023-10-27T10:00:00Z"
                                 }
                               }
                             },
                             "type": {
                               "description": "地址类型",
-                              "type": "integer"
+                              "type": "integer",
+                              "example": 1
                             }
                           }
                         },
@@ -601,7 +642,8 @@
                           "properties": {
                             "address_count": {
                               "description": "地址数量",
-                              "type": "integer"
+                              "type": "integer",
+                              "example": 5
                             },
                             "data": {
                               "description": "数据",
@@ -613,11 +655,13 @@
                               "properties": {
                                 "amount": {
                                   "description": "金额",
-                                  "type": "string"
+                                  "type": "string",
+                                  "example": "200.0"
                                 },
                                 "count": {
                                   "description": "笔数",
-                                  "type": "integer"
+                                  "type": "integer",
+                                  "example": 20
                                 }
                               }
                             }
@@ -625,7 +669,8 @@
                         },
                         "risk_level": {
                           "description": "风险等级",
-                          "type": "integer"
+                          "type": "integer",
+                          "example": 2
                         },
                         "risk_type": {
                           "description": "风险类型统计",
@@ -654,17 +699,20 @@
                                     "properties": {
                                       "amount": {
                                         "description": "金额",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "100.0"
                                       },
                                       "count": {
                                         "description": "笔数",
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "example": 10
                                       }
                                     }
                                   },
                                   "type": {
                                     "description": "风险类型",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "phishing"
                                   }
                                 }
                               }
@@ -673,19 +721,23 @@
                         },
                         "start_time": {
                           "description": "查询开始时间(RFC3339)",
-                          "type": "string"
+                          "type": "string",
+                          "example": "2023-10-27T10:00:00Z"
                         },
                         "started_at": {
                           "description": "分析开始时间(RFC3339)",
-                          "type": "string"
+                          "type": "string",
+                          "example": "2023-10-27T10:00:00Z"
                         },
                         "task_id": {
                           "description": "任务ID",
-                          "type": "string"
+                          "type": "string",
+                          "example": "550e8400-e29b-41d4-a716-446655440000"
                         },
                         "token": {
                           "description": "代币符号",
-                          "type": "string"
+                          "type": "string",
+                          "example": "usdt"
                         },
                         "top_transaction": {
                           "description": "Top 交易对手",
@@ -708,15 +760,18 @@
                                 "properties": {
                                   "counterparty_address": {
                                     "description": "对手方地址",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                   },
                                   "last_transaction_time": {
                                     "description": "最近交易时间(RFC3339)",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "2023-10-27T10:00:00Z"
                                   },
                                   "own_address": {
                                     "description": "本地址",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                   },
                                   "total": {
                                     "description": "汇总",
@@ -728,11 +783,13 @@
                                     "properties": {
                                       "amount": {
                                         "description": "金额",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "100.0"
                                       },
                                       "count": {
                                         "description": "笔数",
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "example": 10
                                       }
                                     }
                                   }
@@ -762,15 +819,18 @@
                                 "properties": {
                                   "source": {
                                     "description": "源节点",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "node1"
                                   },
                                   "target": {
                                     "description": "目标节点",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "node2"
                                   },
                                   "value": {
                                     "description": "金额",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "50.0"
                                   }
                                 }
                               }
@@ -787,11 +847,13 @@
                                 "properties": {
                                   "id": {
                                     "description": "节点ID",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "node1"
                                   },
                                   "label": {
                                     "description": "标签",
-                                    "type": "string"
+                                    "type": "string",
+                                    "example": "Label"
                                   }
                                 }
                               }
@@ -822,9 +884,9 @@
             "in": "path",
             "description": "任务ID",
             "required": true,
-            "example": "",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
             }
           }
         ],
@@ -1264,9 +1326,9 @@
             "in": "path",
             "description": "地址 ID",
             "required": true,
-            "example": "",
             "schema": {
-              "type": "string"
+              "type": "string",
+              "example": "550e8400-e29b-41d4-a716-446655440000"
             }
           }
         ],
@@ -1449,11 +1511,13 @@
                               },
                               "timestamp": {
                                 "description": "RFC3339",
-                                "type": "string"
+                                "type": "string",
+                                "example": "2023-10-27T10:00:00Z"
                               },
                               "type": {
                                 "description": "事件类型枚举",
-                                "type": "string"
+                                "type": "string",
+                                "example": "TRANSACTION_IN"
                               }
                             }
                           },

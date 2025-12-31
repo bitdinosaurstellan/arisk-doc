@@ -98,11 +98,13 @@
                                                     },
                                                     "completed_at": {
                                                         "description": "Analysis completion time (RFC3339)",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "example": "2023-10-27T10:00:00Z"
                                                     },
                                                     "count_limit": {
                                                         "description": "Transaction count limit (0 for unlimited)",
-                                                        "type": "integer"
+                                                        "type": "integer",
+                                                        "example": 0
                                                     },
                                                     "created_at": {
                                                         "description": "Creation time (RFC3339)",
@@ -111,7 +113,8 @@
                                                     },
                                                     "end_time": {
                                                         "description": "Query end time (RFC3339)",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "example": "2023-10-27T10:00:00Z"
                                                     },
                                                     "risk_level": {
                                                         "description": "Risk level",
@@ -120,16 +123,18 @@
                                                     },
                                                     "start_time": {
                                                         "description": "Query start time (RFC3339)",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "example": "2023-10-27T10:00:00Z"
                                                     },
                                                     "started_at": {
                                                         "description": "Analysis start time (RFC3339)",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "example": "2023-10-27T10:00:00Z"
                                                     },
                                                     "status": {
                                                         "description": "Task status",
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 2
                                                     },
                                                     "task_id": {
                                                         "description": "Task ID",
@@ -143,7 +148,8 @@
                                                     },
                                                     "updated_at": {
                                                         "description": "Update time (RFC3339)",
-                                                        "type": "string"
+                                                        "type": "string",
+                                                        "example": "2023-10-27T10:00:00Z"
                                                     }
                                                 }
                                             }
@@ -191,11 +197,13 @@
                                     },
                                     "count_limit": {
                                         "description": "Transaction count limit (0 for unlimited)",
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "example": 0
                                     },
                                     "end_time": {
                                         "description": "End time (RFC3339, optional, auto-derived by default)",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "2023-10-27T10:00:00Z"
                                     },
                                     "metrics": {
                                         "description": "Analysis metrics list, empty or missing means all",
@@ -207,7 +215,8 @@
                                     },
                                     "start_time": {
                                         "description": "Start time (RFC3339, optional, auto-derived by default)",
-                                        "type": "string"
+                                        "type": "string",
+                                        "example": "2023-10-27T10:00:00Z"
                                     },
                                     "token": {
                                         "description": "Token symbol (e.g., usdt)",
@@ -237,7 +246,8 @@
                                             "description": "List of metrics actually analyzed",
                                             "type": "array",
                                             "items": {
-                                                "type": "string"
+                                                "type": "string",
+                                                "example": "overview"
                                             }
                                         },
                                         "task_id": {
@@ -247,7 +257,8 @@
                                         },
                                         "tx_count": {
                                             "description": "Number of transactions",
-                                            "type": "integer"
+                                            "type": "integer",
+                                            "example": 100
                                         }
                                     }
                                 }
@@ -312,27 +323,33 @@
                                             "properties": {
                                                 "address": {
                                                     "description": "Address",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                                 },
                                                 "chain": {
                                                     "description": "Chain identifier",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "ethereum"
                                                 },
                                                 "completed_at": {
                                                     "description": "Analysis completion time (RFC3339)",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "2023-10-27T10:00:00Z"
                                                 },
                                                 "count_limit": {
                                                     "description": "Transaction count limit (0 for unlimited)",
-                                                    "type": "integer"
+                                                    "type": "integer",
+                                                    "example": 0
                                                 },
                                                 "created_at": {
                                                     "description": "Creation time (RFC3339)",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "2023-10-27T10:00:00Z"
                                                 },
                                                 "end_time": {
                                                     "description": "Query end time (RFC3339)",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "2023-10-27T10:00:00Z"
                                                 },
                                                 "habit": {
                                                     "description": "Trading habits",
@@ -354,7 +371,8 @@
                                                                 "properties": {
                                                                     "hour": {
                                                                         "description": "Hour (0~23)",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "12"
                                                                     },
                                                                     "inflow": {
                                                                         "description": "Inflow",
@@ -366,11 +384,13 @@
                                                                         "properties": {
                                                                             "amount": {
                                                                                 "description": "Amount",
-                                                                                "type": "string"
+                                                                                "type": "string",
+                                                                                "example": "100.0"
                                                                             },
                                                                             "count": {
                                                                                 "description": "Count",
-                                                                                "type": "integer"
+                                                                                "type": "integer",
+                                                                                "example": 10
                                                                             }
                                                                         }
                                                                     },
@@ -384,11 +404,13 @@
                                                                         "properties": {
                                                                             "amount": {
                                                                                 "description": "Amount",
-                                                                                "type": "string"
+                                                                                "type": "string",
+                                                                                "example": "50.0"
                                                                             },
                                                                             "count": {
                                                                                 "description": "Count",
-                                                                                "type": "integer"
+                                                                                "type": "integer",
+                                                                                "example": 5
                                                                             }
                                                                         }
                                                                     }
@@ -416,11 +438,13 @@
                                                                 "properties": {
                                                                     "balance": {
                                                                         "description": "Balance",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "1000.0"
                                                                     },
                                                                     "date": {
                                                                         "description": "Date (RFC3339)",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "2023-01-01"
                                                                     }
                                                                 }
                                                             }
@@ -448,31 +472,38 @@
                                                     "properties": {
                                                         "active": {
                                                             "description": "Whether active",
-                                                            "type": "boolean"
+                                                            "type": "boolean",
+                                                            "example": true
                                                         },
                                                         "address": {
                                                             "description": "Address",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                                         },
                                                         "balance": {
                                                             "description": "Balance",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "1000.0"
                                                         },
                                                         "balance_coin": {
                                                             "description": "Balance currency",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "ETH"
                                                         },
                                                         "exchange_name": {
                                                             "description": "Exchange name",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "Binance"
                                                         },
                                                         "first_transfer_address": {
                                                             "description": "First counterparty address",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                                         },
                                                         "first_transfer_time": {
                                                             "description": "First transfer time (RFC3339)",
-                                                            "type": "string"
+                                                            "type": "string",
+                                                            "example": "2023-01-01T00:00:00Z"
                                                         },
                                                         "in_info": {
                                                             "description": "Inflow information",
@@ -492,27 +523,32 @@
                                                                     "properties": {
                                                                         "amount": {
                                                                             "description": "Amount",
-                                                                            "type": "string"
+                                                                            "type": "string",
+                                                                            "example": "100.0"
                                                                         },
                                                                         "count": {
                                                                             "description": "Count",
-                                                                            "type": "integer"
+                                                                            "type": "integer",
+                                                                            "example": 10
                                                                         }
                                                                     }
                                                                 },
                                                                 "latest": {
                                                                     "description": "Latest time (RFC3339)",
-                                                                    "type": "string"
+                                                                    "type": "string",
+                                                                    "example": "2023-10-27T10:00:00Z"
                                                                 }
                                                             }
                                                         },
                                                         "is_blocked": {
                                                             "description": "Whether blocked",
-                                                            "type": "boolean"
+                                                            "type": "boolean",
+                                                            "example": true
                                                         },
                                                         "is_sanction": {
                                                             "description": "Whether sanctioned",
-                                                            "type": "boolean"
+                                                            "type": "boolean",
+                                                            "example": false
                                                         },
                                                         "out_info": {
                                                             "description": "Outflow information",
@@ -532,17 +568,20 @@
                                                                     "properties": {
                                                                         "amount": {
                                                                             "description": "Amount",
-                                                                            "type": "string"
+                                                                            "type": "string",
+                                                                            "example": "100.0"
                                                                         },
                                                                         "count": {
                                                                             "description": "Count",
-                                                                            "type": "integer"
+                                                                            "type": "integer",
+                                                                            "example": 10
                                                                         }
                                                                     }
                                                                 },
                                                                 "latest": {
                                                                     "description": "Latest time (RFC3339)",
-                                                                    "type": "string"
+                                                                    "type": "string",
+                                                                    "example": "2023-10-27T10:00:00Z"
                                                                 }
                                                             }
                                                         },
@@ -564,23 +603,27 @@
                                                                     "properties": {
                                                                         "amount": {
                                                                             "description": "Amount",
-                                                                            "type": "string"
+                                                                            "type": "string",
+                                                                            "example": "100.0"
                                                                         },
                                                                         "count": {
                                                                             "description": "Count",
-                                                                            "type": "integer"
+                                                                            "type": "integer",
+                                                                            "example": 10
                                                                         }
                                                                     }
                                                                 },
                                                                 "latest": {
                                                                     "description": "Latest time (RFC3339)",
-                                                                    "type": "string"
+                                                                    "type": "string",
+                                                                    "example": "2023-10-27T10:00:00Z"
                                                                 }
                                                             }
                                                         },
                                                         "type": {
                                                             "description": "Address type",
-                                                            "type": "integer"
+                                                            "type": "integer",
+                                                            "example": 1
                                                         }
                                                     }
                                                 },
@@ -594,7 +637,8 @@
                                                     "properties": {
                                                         "address_count": {
                                                             "description": "Address count",
-                                                            "type": "integer"
+                                                            "type": "integer",
+                                                            "example": 5
                                                         },
                                                         "data": {
                                                             "description": "Data",
@@ -606,11 +650,13 @@
                                                             "properties": {
                                                                 "amount": {
                                                                     "description": "Amount",
-                                                                    "type": "string"
+                                                                    "type": "string",
+                                                                    "example": "200.0"
                                                                 },
                                                                 "count": {
                                                                     "description": "Count",
-                                                                    "type": "integer"
+                                                                    "type": "integer",
+                                                                    "example": 20
                                                                 }
                                                             }
                                                         }
@@ -618,7 +664,8 @@
                                                 },
                                                 "risk_level": {
                                                     "description": "Risk level",
-                                                    "type": "integer"
+                                                    "type": "integer",
+                                                    "example": 2
                                                 },
                                                 "risk_type": {
                                                     "description": "Risk type statistics",
@@ -647,17 +694,20 @@
                                                                         "properties": {
                                                                             "amount": {
                                                                                 "description": "Amount",
-                                                                                "type": "string"
+                                                                                "type": "string",
+                                                                                "example": "100.0"
                                                                             },
                                                                             "count": {
                                                                                 "description": "Count",
-                                                                                "type": "integer"
+                                                                                "type": "integer",
+                                                                                "example": 10
                                                                             }
                                                                         }
                                                                     },
                                                                     "type": {
                                                                         "description": "Risk type",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "phishing"
                                                                     }
                                                                 }
                                                             }
@@ -666,19 +716,23 @@
                                                 },
                                                 "start_time": {
                                                     "description": "Query start time (RFC3339)",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "2023-10-27T10:00:00Z"
                                                 },
                                                 "started_at": {
                                                     "description": "Analysis start time (RFC3339)",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "2023-10-27T10:00:00Z"
                                                 },
                                                 "task_id": {
                                                     "description": "Task ID",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "550e8400-e29b-41d4-a716-446655440000"
                                                 },
                                                 "token": {
                                                     "description": "Token symbol",
-                                                    "type": "string"
+                                                    "type": "string",
+                                                    "example": "usdt"
                                                 },
                                                 "top_transaction": {
                                                     "description": "Top counterparties",
@@ -701,15 +755,18 @@
                                                                 "properties": {
                                                                     "counterparty_address": {
                                                                         "description": "Counterparty address",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                                                     },
                                                                     "last_transaction_time": {
                                                                         "description": "Latest transaction time (RFC3339)",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "2023-10-27T10:00:00Z"
                                                                     },
                                                                     "own_address": {
                                                                         "description": "Own address",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
                                                                     },
                                                                     "total": {
                                                                         "description": "Summary",
@@ -721,11 +778,13 @@
                                                                         "properties": {
                                                                             "amount": {
                                                                                 "description": "Amount",
-                                                                                "type": "string"
+                                                                                "type": "string",
+                                                                                "example": "300.0"
                                                                             },
                                                                             "count": {
                                                                                 "description": "Count",
-                                                                                "type": "integer"
+                                                                                "type": "integer",
+                                                                                "example": 30
                                                                             }
                                                                         }
                                                                     }
@@ -755,15 +814,18 @@
                                                                 "properties": {
                                                                     "source": {
                                                                         "description": "Source node",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "node1"
                                                                     },
                                                                     "target": {
                                                                         "description": "Target node",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "node2"
                                                                     },
                                                                     "value": {
                                                                         "description": "Amount",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "50.0"
                                                                     }
                                                                 }
                                                             }
@@ -780,11 +842,13 @@
                                                                 "properties": {
                                                                     "id": {
                                                                         "description": "Node ID",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "node1"
                                                                     },
                                                                     "label": {
                                                                         "description": "Label",
-                                                                        "type": "string"
+                                                                        "type": "string",
+                                                                        "example": "Label"
                                                                     }
                                                                 }
                                                             }
@@ -912,7 +976,8 @@
                         "required": true,
                         "schema": {
                             "type": "integer",
-                            "default": 1
+                            "default": 1,
+                            "example": 1
                         }
                     },
                     {
@@ -1442,11 +1507,13 @@
                                                             },
                                                             "timestamp": {
                                                                 "description": "RFC3339",
-                                                                "type": "string"
+                                                                "type": "string",
+                                                                "example": "2023-10-27T10:00:00Z"
                                                             },
                                                             "type": {
                                                                 "description": "Event type enum",
-                                                                "type": "string"
+                                                                "type": "string",
+                                                                "example": "TRANSACTION_IN"
                                                             }
                                                         }
                                                     },
