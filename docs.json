@@ -48,18 +48,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tab": "更新日志",
-                "groups": [
-                  {
-                    "group": "版本发布",
-                    "pages": [
-                      "zh/updatelog/overview",
-                      "zh/updatelog/latest"
-                    ]
-                  }
-                ]
               }
             ]
           },
@@ -98,18 +86,6 @@
                       "zh/api-reference/v1/webhooks/overview",
                       "zh/api-reference/v1/webhooks/risk-change",
                       "zh/api-reference/v1/webhooks/known-risk"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tab": "更新日志",
-                "groups": [
-                  {
-                    "group": "版本发布",
-                    "pages": [
-                      "zh/updatelog/overview",
-                      "zh/updatelog/latest"
                     ]
                   }
                 ]
@@ -156,18 +132,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tab": "更新日誌",
-                "groups": [
-                  {
-                    "group": "版本發佈",
-                    "pages": [
-                      "tw/updatelog/overview",
-                      "tw/updatelog/latest"
-                    ]
-                  }
-                ]
               }
             ]
           },
@@ -206,18 +170,6 @@
                       "tw/api-reference/v1/webhooks/overview",
                       "tw/api-reference/v1/webhooks/risk-change",
                       "tw/api-reference/v1/webhooks/known-risk"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tab": "更新日誌",
-                "groups": [
-                  {
-                    "group": "版本發佈",
-                    "pages": [
-                      "tw/updatelog/overview",
-                      "tw/updatelog/latest"
                     ]
                   }
                 ]
@@ -264,18 +216,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "tab": "Update Log",
-                "groups": [
-                  {
-                    "group": "Version Release",
-                    "pages": [
-                      "en/updatelog/overview",
-                      "en/updatelog/latest"
-                    ]
-                  }
-                ]
               }
             ]
           },
@@ -314,18 +254,6 @@
                       "en/api-reference/v1/webhooks/overview",
                       "en/api-reference/v1/webhooks/risk-change",
                       "en/api-reference/v1/webhooks/known-risk"
-                    ]
-                  }
-                ]
-              },
-              {
-                "tab": "Update Log",
-                "groups": [
-                  {
-                    "group": "Version Release",
-                    "pages": [
-                      "en/updatelog/overview",
-                      "en/updatelog/latest"
                     ]
                   }
                 ]
