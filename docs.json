@@ -119,6 +119,114 @@
         ]
       },
       {
+        "language": "zh-Hant",
+        "versions": [
+          {
+            "version": "v2 (推薦)",
+            "default": true,
+            "tabs": [
+              {
+                "tab": "API 參考",
+                "groups": [
+                  {
+                    "group": "分析任務",
+                    "pages": [
+                      "tw/api-reference/v2/endpoint/analysistasklist",
+                      "tw/api-reference/v2/endpoint/analysistaskcreate",
+                      "tw/api-reference/v2/endpoint/analysistaskstatusget",
+                      "tw/api-reference/v2/endpoint/analysistaskresultget"
+                    ]
+                  },
+                  {
+                    "group": "地址監控",
+                    "pages": [
+                      "tw/api-reference/v2/endpoint/monitoraddresseslist",
+                      "tw/api-reference/v2/endpoint/monitoraddressesadd",
+                      "tw/api-reference/v2/endpoint/monitoraddressupdate",
+                      "tw/api-reference/v2/endpoint/monitoraddressesdelete",
+                      "tw/api-reference/v2/endpoint/monitoralertslist"
+                    ]
+                  },
+                  {
+                    "group": "Webhook 推送",
+                    "pages": [
+                      "tw/api-reference/v2/webhooks/overview",
+                      "tw/api-reference/v2/webhooks/address-risk-change",
+                      "tw/api-reference/v2/webhooks/transaction-detection"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "更新日誌",
+                "groups": [
+                  {
+                    "group": "版本發佈",
+                    "pages": [
+                      "tw/updatelog/overview",
+                      "tw/updatelog/latest"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "version": "v1 (維護中)",
+            "tabs": [
+              {
+                "tab": "API 參考",
+                "groups": [
+                  {
+                    "group": "地址監控",
+                    "pages": [
+                      "tw/api-reference/v1/endpoint/monitoraddresslist",
+                      "tw/api-reference/v1/endpoint/monitoraddressadd",
+                      "tw/api-reference/v1/endpoint/monitoraddressstatusupdate",
+                      "tw/api-reference/v1/endpoint/monitoraddressremove",
+                      "tw/api-reference/v1/endpoint/monitoralerts",
+                      "tw/api-reference/v1/endpoint/riskchangealerts",
+                      "tw/api-reference/v1/endpoint/monitorconfigget",
+                      "tw/api-reference/v1/endpoint/monitorconfigset",
+                      "tw/api-reference/v1/endpoint/monitorconfigupdate"
+                    ]
+                  },
+                  {
+                    "group": "分析任務",
+                    "pages": [
+                      "tw/api-reference/v1/endpoint/querycreate",
+                      "tw/api-reference/v1/endpoint/queryhistories",
+                      "tw/api-reference/v1/endpoint/queryresult",
+                      "tw/api-reference/v1/endpoint/querystatus"
+                    ]
+                  },
+                  {
+                    "group": "Webhook 推送",
+                    "pages": [
+                      "tw/api-reference/v1/webhooks/overview",
+                      "tw/api-reference/v1/webhooks/risk-change",
+                      "tw/api-reference/v1/webhooks/known-risk"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "更新日誌",
+                "groups": [
+                  {
+                    "group": "版本發佈",
+                    "pages": [
+                      "tw/updatelog/overview",
+                      "tw/updatelog/latest"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "language": "en",
         "versions": [
           {
