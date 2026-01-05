@@ -1,13 +1,24 @@
 ---
-title: "Monitor Service Error Reference"
-description: "Guidance to help you resolve issues with address monitoring and alert notifications."
+title: "Monitor Error Codes"
+description: "Business error codes related to address monitoring and notifications."
 ---
 
-We anticipate that you might encounter the following error feedback while using the API. Refer to the information below to help locate the issue and understand handling suggestions.
+### Response Structure
 
-<ResponseField name="105001" type="InvalidArgument">
-  Tenant id is required
-</ResponseField>
+When an API call results in an error, a JSON response containing the following fields will be returned:
+
+- `code`: A 6-digit business error code.
+- `message`: A descriptive message for the error.
+
+### Error Code Format
+
+The first digit of the business error code represents the category or type of error:
+
+- **1**: Parameter or Input Error.
+- **2**: Business Logic Error.
+- **3**: System or Internal Error.
+
+---
 
 <ResponseField name="105002" type="InvalidArgument">
   Chain or token is required
@@ -29,22 +40,6 @@ We anticipate that you might encounter the following error feedback while using 
   Too many addresses in a single request
 </ResponseField>
 
-<ResponseField name="105007" type="InvalidArgument">
-  Invalid channel type
-</ResponseField>
-
-<ResponseField name="105008" type="InvalidArgument">
-  Channel name is required
-</ResponseField>
-
-<ResponseField name="105009" type="InvalidArgument">
-  Channel configuration is invalid
-</ResponseField>
-
-<ResponseField name="105011" type="InvalidArgument">
-  Notification id is required
-</ResponseField>
-
 <ResponseField name="205001" type="NotFound">
   Monitor address not found
 </ResponseField>
@@ -57,72 +52,12 @@ We anticipate that you might encounter the following error feedback while using 
   Monitor address already exists
 </ResponseField>
 
-<ResponseField name="205004" type="NotFound">
-  Tenant monitor config not found
-</ResponseField>
-
-<ResponseField name="205005" type="NotFound">
-  Notification channel not found
-</ResponseField>
-
-<ResponseField name="205006" type="AlreadyExists">
-  Notification channel name already exists
-</ResponseField>
-
-<ResponseField name="205007" type="NotFound">
-  Notification record not found
-</ResponseField>
-
-<ResponseField name="205008" type="AlreadyExists">
-  Event already processed
-</ResponseField>
-
-<ResponseField name="205009" type="FailedPrecondition">
-  Event type is disabled for tenant
-</ResponseField>
-
 <ResponseField name="205010" type="NotFound">
   No matched monitored address
 </ResponseField>
 
 <ResponseField name="205011" type="FailedPrecondition">
   Credits insufficient for overage slots
-</ResponseField>
-
-<ResponseField name="305001" type="Unavailable">
-  Risk service unavailable
-</ResponseField>
-
-<ResponseField name="305002" type="Unavailable">
-  Analysis service unavailable
-</ResponseField>
-
-<ResponseField name="305003" type="Unavailable">
-  Failed to publish notification task
-</ResponseField>
-
-<ResponseField name="305004" type="Internal">
-  Data corrupted
-</ResponseField>
-
-<ResponseField name="305005" type="Internal">
-  Analysis task failed
-</ResponseField>
-
-<ResponseField name="305006" type="Unavailable">
-  NATS publish failed
-</ResponseField>
-
-<ResponseField name="305007" type="DeadlineExceeded">
-  NATS consume timeout
-</ResponseField>
-
-<ResponseField name="305008" type="Internal">
-  Cache operation failed
-</ResponseField>
-
-<ResponseField name="305009" type="Unavailable">
-  Subscription service unavailable
 </ResponseField>
 
 <ResponseField name="305010" type="Unavailable">

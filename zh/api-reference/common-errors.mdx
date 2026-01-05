@@ -1,16 +1,27 @@
 ---
-title: "通用错误反馈"
-description: "在调用 API 时可能遇到的基础系统错误说明。"
+title: "通用错误码"
+description: "系统通用的基础业务错误码及其含义。"
 ---
 
-我们推测在使用 API 的过程中，您可能会遇到以下错误反馈。您可以参考下述信息帮助您定位问题并了解处理建议。
+### 响应结构
+
+当 API 调用发生错误时，将返回包含以下字段的 JSON 响应：
+
+- `code`: 6 位数字的业务错误码。
+- `message`: 错误的具体描述信息。
+
+### 错误码格式
+
+业务错误码的第一位数字代表错误的级别或类型：
+
+- **1**: 参数或输入错误。
+- **2**: 业务逻辑错误。
+- **3**: 系统或内部错误。
+
+---
 
 <ResponseField name="399101" type="Internal">
   Internal error (内部错误)
-</ResponseField>
-
-<ResponseField name="399102" type="Unavailable">
-  Upstream service unavailable (上游服务不可用)
 </ResponseField>
 
 <ResponseField name="399201" type="Unauthenticated">

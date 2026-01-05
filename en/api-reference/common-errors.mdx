@@ -1,16 +1,27 @@
 ---
-title: "General Error Reference"
-description: "Information regarding fundamental system errors occurred during API calls."
+title: "General Error Codes"
+description: "General system-level business error codes and their meanings."
 ---
 
-We anticipate that you might encounter the following error feedback while using the API. Refer to the information below to help locate the issue and understand handling suggestions.
+### Response Structure
+
+When an API call results in an error, a JSON response containing the following fields will be returned:
+
+- `code`: A 6-digit business error code.
+- `message`: A descriptive message for the error.
+
+### Error Code Format
+
+The first digit of the business error code represents the category or type of error:
+
+- **1**: Parameter or Input Error.
+- **2**: Business Logic Error.
+- **3**: System or Internal Error.
+
+---
 
 <ResponseField name="399101" type="Internal">
   Internal error
-</ResponseField>
-
-<ResponseField name="399102" type="Unavailable">
-  Upstream service unavailable
 </ResponseField>
 
 <ResponseField name="399201" type="Unauthenticated">
