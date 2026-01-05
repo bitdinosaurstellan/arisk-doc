@@ -12,25 +12,25 @@ openapi: /tw/api-reference/v2/open-v2.json post /v2/analysis/tasks
   *   數組中若有重複項會自動去重，且響應結果將儘量保持請求中的指標順序。
 
   <Expandable title="支持的指標枚舉值">
-    <ResponseField name="overview" type="Metric">
+    <ResponseField name="OVERVIEW" type="Metric">
       **地址總覽** - 包含餘額、地址類型（交易所/合約等）、首次轉賬時間及對手方、封禁/制裁狀態。
     </ResponseField>
-    <ResponseField name="txflow" type="Metric">
+    <ResponseField name="TXFLOW" type="Metric">
       **資金流向** - 包含資金流出的拓撲圖數據（節點 nodes 與連線 links）。
     </ResponseField>
-    <ResponseField name="habit" type="Metric">
+    <ResponseField name="HABIT" type="Metric">
       **交易習慣** - 包含按小時（0-23）分布的流入/流出金額與筆數統計。
     </ResponseField>
-    <ResponseField name="historical_balance" type="Metric">
+    <ResponseField name="HISTORICAL_BALANCE" type="Metric">
       **歷史餘額** - 包含每日歷史餘額變動曲線數據。
     </ResponseField>
-    <ResponseField name="risk_type" type="Metric">
+    <ResponseField name="RISK_TYPE" type="Metric">
       **風險類型統計** - 包含按風險標籤類型（如 Scam, Hacker, Mixer 等）分類的交易彙總。
     </ResponseField>
-    <ResponseField name="top_transaction" type="Metric">
+    <ResponseField name="TOP_TRANSACTION" type="Metric">
       **Top 交易對手** - 包含交易金額或頻率最高的對手方地址列表。
     </ResponseField>
-    <ResponseField name="risk_address_total" type="Metric">
+    <ResponseField name="RISK_ADDRESS_TOTAL" type="Metric">
       **風險地址彙總** - 包含涉及已知風險地址的交易金額、筆數及地址總數合計。
     </ResponseField>
   </Expandable>
