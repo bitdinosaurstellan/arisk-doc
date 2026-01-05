@@ -211,10 +211,19 @@
                     "example": "2023-10-27T10:00:00Z"
                   },
                   "metrics": {
-                    "description": "分析指标列表，空或缺省表示全部",
+                    "description": "分析指標列表。若不傳該字段或傳空數組，則默認返回所有支持的指標。傳入值必須在支持的指標列表內。",
                     "type": "array",
                     "items": {
                       "type": "string",
+                      "enum": [
+                        "overview",
+                        "txflow",
+                        "habit",
+                        "historical_balance",
+                        "risk_type",
+                        "top_transaction",
+                        "risk_address_total"
+                      ],
                       "example": "overview"
                     }
                   },

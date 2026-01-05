@@ -206,10 +206,19 @@
                                         "example": "2023-10-27T10:00:00Z"
                                     },
                                     "metrics": {
-                                        "description": "Analysis metrics list, empty or missing means all",
+                                        "description": "Analysis metrics list. If not provided or empty, returns all supported metrics by default. Values must be from the supported list.",
                                         "type": "array",
                                         "items": {
                                             "type": "string",
+                                            "enum": [
+                                                "overview",
+                                                "txflow",
+                                                "habit",
+                                                "historical_balance",
+                                                "risk_type",
+                                                "top_transaction",
+                                                "risk_address_total"
+                                            ],
                                             "example": "overview"
                                         }
                                     },
