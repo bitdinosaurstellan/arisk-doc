@@ -14,7 +14,7 @@
         "language": "zh",
         "versions": [
           {
-            "version": "v2 (推荐)",
+            "version": "v2",
             "default": true,
             "tabs": [
               {
@@ -60,7 +60,7 @@
             ]
           },
           {
-            "version": "v1 (维护中)",
+            "version": "v1",
             "tabs": [
               {
                 "tab": "API 参考",
@@ -114,7 +114,7 @@
         "language": "zh-Hant",
         "versions": [
           {
-            "version": "v2 (推薦)",
+            "version": "v2",
             "default": true,
             "tabs": [
               {
@@ -160,7 +160,7 @@
             ]
           },
           {
-            "version": "v1 (維護中)",
+            "version": "v1",
             "tabs": [
               {
                 "tab": "API 參考",
@@ -214,7 +214,7 @@
         "language": "en",
         "versions": [
           {
-            "version": "v2 (Recommended)",
+            "version": "v2",
             "default": true,
             "tabs": [
               {
@@ -260,7 +260,7 @@
             ]
           },
           {
-            "version": "v1 (Maintenance)",
+            "version": "v1",
             "tabs": [
               {
                 "tab": "API Reference",
