@@ -1,13 +1,21 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
-  "name": "Arisk doc",
+  "theme": "almond",
+  "name": "Arisk",
   "colors": {
     "primary": "#0066FF",
     "light": "#3B82F6",
     "dark": "#2563EB"
   },
   "favicon": "/favicon.svg",
+  "navbar": {
+    "links": [
+      {
+        "label": "Dashboard",
+        "href": "https://arisk.io/dashboard"
+      }
+    ]
+  },
   "navigation": {
     "languages": [
       {
@@ -22,6 +30,7 @@
                 "groups": [
                   {
                     "group": "分析任务",
+                    "icon": "magnifying-glass-chart",
                     "pages": [
                       "zh/api-reference/v2/endpoint/analysistasklist",
                       "zh/api-reference/v2/endpoint/analysistaskcreate",
@@ -32,6 +41,7 @@
                   },
                   {
                     "group": "地址监控",
+                    "icon": "shield-check",
                     "pages": [
                       "zh/api-reference/v2/endpoint/monitoraddresseslist",
                       "zh/api-reference/v2/endpoint/monitoraddressesadd",
@@ -43,12 +53,14 @@
                   },
                   {
                     "group": "通用说明",
+                    "icon": "book-open",
                     "pages": [
                       "zh/api-reference/common-errors"
                     ]
                   },
                   {
                     "group": "Webhook 推送",
+                    "icon": "bell",
                     "pages": [
                       "zh/api-reference/v2/webhooks/overview",
                       "zh/api-reference/v2/webhooks/address-risk-change",
@@ -122,6 +134,7 @@
                 "groups": [
                   {
                     "group": "分析任務",
+                    "icon": "magnifying-glass-chart",
                     "pages": [
                       "tw/api-reference/v2/endpoint/analysistasklist",
                       "tw/api-reference/v2/endpoint/analysistaskcreate",
@@ -132,6 +145,7 @@
                   },
                   {
                     "group": "地址監控",
+                    "icon": "shield-check",
                     "pages": [
                       "tw/api-reference/v2/endpoint/monitoraddresseslist",
                       "tw/api-reference/v2/endpoint/monitoraddressesadd",
@@ -143,6 +157,7 @@
                   },
                   {
                     "group": "通用說明",
+                    "icon": "book-open",
                     "pages": [
                       "tw/api-reference/common-errors"
                     ]
@@ -222,6 +237,7 @@
                 "groups": [
                   {
                     "group": "Analysis Tasks",
+                    "icon": "magnifying-glass-chart",
                     "pages": [
                       "en/api-reference/v2/endpoint/analysistasklist",
                       "en/api-reference/v2/endpoint/analysistaskcreate",
@@ -232,6 +248,7 @@
                   },
                   {
                     "group": "Address Monitoring",
+                    "icon": "shield-check",
                     "pages": [
                       "en/api-reference/v2/endpoint/monitoraddresseslist",
                       "en/api-reference/v2/endpoint/monitoraddressesadd",
@@ -243,12 +260,14 @@
                   },
                   {
                     "group": "General Information",
+                    "icon": "book-open",
                     "pages": [
                       "en/api-reference/common-errors"
                     ]
                   },
                   {
                     "group": "Webhook Push",
+                    "icon": "bell",
                     "pages": [
                       "en/api-reference/v2/webhooks/overview",
                       "en/api-reference/v2/webhooks/address-risk-change",
@@ -313,8 +332,9 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/Arisk logo_黑色透明底.png",
+    "dark": "/logo/Arisk logo_白色透明底.png",
+    "href": "https://arisk.io"
   },
   "contextual": {
     "options": [
